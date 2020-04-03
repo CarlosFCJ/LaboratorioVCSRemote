@@ -6,7 +6,8 @@ Created on Tue Mar 31 19:49:59 2020
 """
 import numpy as np
 
-kellos = np.array([27834,23789,30189,30967,32501,32701+31665,17155,4614,834])
+kellos = np.array([27834,23789,30189,30967,32501,32701,31665,17155,4614,834])
+print(kellos)
 
 # Punto 1
 def promedio(r,t):
@@ -15,11 +16,16 @@ def promedio(r,t):
     for p in range(r,t):
         c = c + kellos[p]
         n += 1
-    prome = c /n
+    if t == 9 and r == 0 :
+        prome = c/n
+    else:
+        prome = (c+kellos[t])/n
     return prome
-def compa(a1,b1,a2,b2):
-    prome1 = promedio(a1,b1)
+def compa(a,b,a2,b2):
+    prome1 = promedio(a,b)
+    print(prome1)
     prome2 = promedio(a2,b2)
+    print(prome2)
     dif = prome1 - prome2
     return dif
 print("La diferencia es de " + str(compa(0,1,8,9)))
@@ -80,7 +86,7 @@ def Porce(kellos):
         c = c + kellos[r]
     for m in range(0,long) :
         porap = ((kellos[m])*100)/c
-        print("le porcentaje que aporta el año " + str(p) + " es " + str(porap) + "%")
+        print("El porcentaje que aporta el año " + str(p) + " es " + str(porap) + "%")
         p = int(p) + 1 
 print(Porce(kellos))
 # punto 6
