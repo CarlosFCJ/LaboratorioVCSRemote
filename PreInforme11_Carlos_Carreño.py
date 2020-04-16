@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Apr 15 16:26:39 2020
-
-@author: Carlos CJ
-"""
 import numpy as np
 fayala = np.array([['Juan','Amparo','Antonio','María','Lisa','Leonardo','Javier','Santiago'],
                    ["M","F","M","F","F","M","M","M"],
