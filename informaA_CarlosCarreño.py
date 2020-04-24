@@ -102,15 +102,15 @@ peor_mes(ganancias,Ciuda)
 
 def imprimir_personalizado(a,b,c) :
     dias = np.array(["         ","Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"])
-    Ciudadd = np.array(["Bucaramanga ","Floridablanca","Giròn        ","Piedecuesta  "])
+    Ciudadd = np.array(["Bucaramanga  ","Floridablanca ","Giròn        ","Piedecuesta  "])
     for r in range(0,4):
         print("             " + str(dias[range(b,(c+1))]))
         print(str(Ciudadd[r]) + str(a[r,[range((b-1),c)]]) + "\n")
 imprimir_personalizado(ganancias,3,6)
 def imprimir_personalizado(ganancias, z, w):
     ciudad, mes = ganancias.shape
-    ciudades = ["Bucaramanga  ", "Floridablanca", "Girón        ",
-                         "Piedecuesta  "]
+    ciudades = ["Bucaramanga   ", "Floridablanca  ", "Girón        ",
+                         "Piedecuesta   "]
     meses = ['         ', 'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago',
              'Sep', 'Oct', 'Nov', 'Dic']
     print("\n" + str(meses[0]) + str(meses[z: w+1]))
@@ -120,7 +120,7 @@ def imprimir_personalizado(ganancias, z, w):
 def promedio(ingresos, egresos, ganancias):
     meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
              "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-    citys = ["Bucaramanga", "Floridablanca", "Girón", "Piedecuesta"]
+    citys = ["Bucaramanga ", "Floridablanca ", "Girón", "Piedecuesta"]
     print('\n')
     for i in range(0, len(citys)):
         suma = 0
@@ -146,4 +146,4 @@ def promedio(ingresos, egresos, ganancias):
         print('El promedio de ganancias de la ciudad ' + str(citys[i]) + 
               ' es: ' + str(round(promedio, 2)))
 
-
+promedio(ingresos, egresos, ganancias)
